@@ -1,0 +1,31 @@
+{
+    "extraction_timestamp": "2025-09-24T10:42:50.206319",
+    "source_license_number": "10015064000576",
+    "search_results": [
+        {
+            "sno": "1",
+            "company_name": "BRIGHT LIFECARE PVT LTD",
+            "premises_address": "Wing C, 2nd Floor, Tower-B, The Presidency, Anamika Enclave, Sector-14, Mehrauli Gurgaon Road, Opposite Govt. Girls College, Gurugram, Haryana-122001,Gurugram,Haryana-122001",
+            "license_number": "10015064000576",
+            "license_type": "Central License",
+            "status": "Active",
+            "view_products_available": true
+        }
+    ],
+    "product_details": {
+        "company_name": null,
+        "license_number": null,
+        "license_type": null,
+        "status": null,
+        "validity": null,
+        "address": null,
+        "products": null,
+        "manufacturing_details": null
+    },
+    "summary": {
+        "search_successful": true,
+        "products_extracted": true,
+        "total_records_found": 1
+    },
+    "page_url": "https://foscos.fssai.gov.in/"
+}
