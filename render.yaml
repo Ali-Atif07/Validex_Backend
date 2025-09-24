@@ -2,12 +2,13 @@ services:
   - type: web
     name: foscos-scraper
     env: python
+    python_version: 3.12      
     buildCommand: |
+      apt-get update && \
+      apt-get install -y tesseract-ocr chromium-browser chromium-chromedriver && \
+      pip install --upgrade pip && \
       pip install -r requirements.txt
-      apt-get update
-      apt-get install -y tesseract-ocr
-      apt-get install -y chromium-browser chromium-chromedriver
-    startCommand: node server.js
+    startCommand: python main.py  
     envVars:
       - key: PYTHON_PATH
         value: python3
