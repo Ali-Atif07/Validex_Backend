@@ -5,8 +5,7 @@ from bs4 import BeautifulSoup
 from PIL import Image, ImageOps
 from io import BytesIO
 import pytesseract
-import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tesseract.exe'
+# pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tesseract.exe'
 import google.generativeai as genai
 import json
 import logging
@@ -20,6 +19,9 @@ import time
 import base64
 from datetime import datetime
 import os
+
+if os.name != 'nt':  # Not Windows
+    pytesseract.pytesseract.tesseract_cmd = 'tesseract'
 
 # -- Setup logging --
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -334,10 +336,16 @@ def extract_license_with_llm(url: str, max_retries: int = 2) -> dict:
 def automate_foscos_form(license_number: str):
     options = webdriver.ChromeOptions()
     options.add_argument("--start-maximized")
-    # Add these options for better stability
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--window-size=1920,1080")
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
+
+    options.binary_location = "/usr/bin/chromium-browser"
     
     driver = webdriver.Chrome(options=options)
     captcha_solver = CaptchaSolver(CAPTCHA_API_KEY)

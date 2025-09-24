@@ -7,11 +7,14 @@ const fs = require('fs').promises;
 const { v4: uuidv4 } = require('uuid');
 const redis = require('redis');
 const crypto = require('crypto');
-require('dotenv').config();
+// require('dotenv').config();
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
 
 // Redis client setup
 let redisClient;
@@ -82,7 +85,7 @@ async function cleanupPythonScripts() {
   try {
     const scriptsDir = path.join(__dirname, 'python-scripts');
     const files = await fs.readdir(scriptsDir);
-    
+
     for (const file of files) {
       if (file.startsWith('runner_')) {
         await fs.unlink(path.join(scriptsDir, file));
@@ -101,7 +104,7 @@ async function setCachedResult(url, result) {
     const cacheKey = generateCacheKey(url);
     await redisClient.setEx(cacheKey, CACHE_EXPIRY, JSON.stringify(result));
     console.log(`💾 Cached result for URL: ${url}`);
-     await cleanupOldResults();
+    await cleanupOldResults();
   } catch (error) {
     console.warn('Cache write error:', error.message);
   }
@@ -362,7 +365,7 @@ async function cleanupOldResults() {
   try {
     const resultsDir = path.join(__dirname, 'results');
     const files = await fs.readdir(resultsDir);
-    
+
     const resultFiles = files
       .filter(file => file.endsWith('.json') && file.includes('foscos_results_'))
       .map(file => ({
@@ -371,7 +374,7 @@ async function cleanupOldResults() {
         mtime: require('fs').statSync(path.join(resultsDir, file)).mtime
       }))
       .sort((a, b) => b.mtime - a.mtime);
-    
+
     // Keep only 5 most recent files
     if (resultFiles.length > 5) {
       const filesToDelete = resultFiles.slice(5);
@@ -421,7 +424,8 @@ async function runPythonScript(sessionId, url) {
     session.updateStatus('starting_python', 15);
 
     // Determine Python command
-    const pythonCommand = process.env.PYTHON_PATH || 'python';
+    // Determine Python command - updated for Render
+    const pythonCommand = process.env.PYTHON_PATH || process.env.NODE_ENV === 'production' ? 'python3' : 'python';
 
     session.addLog(`Using Python command: ${pythonCommand}`);
     session.addLog(`Script path: ${tempScriptPath}`);

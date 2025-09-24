@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: foscos-scraper
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      apt-get update
+      apt-get install -y tesseract-ocr
+      apt-get install -y chromium-browser chromium-chromedriver
+    startCommand: node server.js
+    envVars:
+      - key: PYTHON_PATH
+        value: python3
+      - key: NODE_ENV
+        value: production
