@@ -1,31 +1,28 @@
-FROM node:18
+FROM python:3.12-slim
 
-# Install Python and pip
+# Install Node.js, Chromium, Tesseract
 RUN apt-get update && apt-get install -y \
-    python3 \
-    python3-pip \
-    tesseract-ocr \
-    chromium \
-    chromium-driver \
+    curl gnupg \
+    tesseract-ocr chromium chromium-driver \
+    && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
-COPY requirements.txt ./
+# Copy requirements first to leverage Docker cache
+COPY requirements.txt .
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
-# Install Node.js dependencies
+# Copy Node files and install dependencies
+COPY package*.json ./
 RUN npm install
 
-# Install Python dependencies
-RUN pip3 install -r requirements.txt
-
-# Copy application code
+# Copy rest of project
 COPY . .
 
-# Set environment variables
+# Environment variables
 ENV PYTHON_PATH=python3
 ENV TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata
 
