@@ -10,7 +10,7 @@ import google.generativeai as genai
 import json
 import logging
 from urllib.parse import urljoin
-import pyperclip  # Optional, for clipboard copy
+# import pyperclip  # Optional, for clipboard copy
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -34,7 +34,7 @@ genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # 2captcha configuration
-CAPTCHA_API_KEY = "e0789a56011da02cbd3968ef6f0b227b"
+CAPTCHA_API_KEY = "e0789a56011da02cbd3968ef6f0b227b" # Not working
 CAPTCHA_ENDPOINT = f"https://api.2captcha.com/proxy?key={CAPTCHA_API_KEY}"
 
 class CaptchaSolver:
