@@ -5,12 +5,10 @@ services:
     python_version: 3.12      
     buildCommand: |
       apt-get update && \
-      apt-get install -y tesseract-ocr chromium-browser chromium-chromedriver && \
+      apt-get install -y tesseract-ocr libtesseract-dev chromium chromium-driver && \
       pip install --upgrade pip && \
       pip install -r requirements.txt
     startCommand: python main.py  
     envVars:
-      - key: PYTHON_PATH
-        value: python3
       - key: NODE_ENV
         value: production
