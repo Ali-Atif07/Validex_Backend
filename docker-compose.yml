@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: validex-app
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+    networks:
+      - backend-net
+
+  redis:
+    image: redis:7.4.5
+    container_name: validex-redis
+   
+    networks:
+      - backend-net
+
+networks:
+  backend-net:
+  app-network:
+    driver: bridge

@@ -1,0 +1,16 @@
+# python-dotenv==1.0.0
+# beautifulsoup4==4.12.2
+# pillow>=10.4.0
+# pytesseract==0.3.10
+# google-generativeai==0.3.2
+# requests==2.31.0
+# pyperclip
+
+
+python-dotenv
+requests
+beautifulsoup4
+Pillow
+pytesseract
+google-generativeai
+selenium
