@@ -1,0 +1,185 @@
+{
+    "extraction_timestamp": "2025-09-28T23:13:12.475023",
+    "source_license_number": "10012022001320",
+    "search_results": [
+        {
+            "sno": "1",
+            "company_name": "PARAG MILK FOODS LIMITED",
+            "premises_address": "43/1- A, AT AWASARI PHATA, POST. MANCHAR, TAL AMBEGAON, DIST PUNE ,Pune,Maharashtra-410503",
+            "license_number": "10012022001320",
+            "license_type": "Central License",
+            "status": "Active",
+            "view_products_available": true
+        }
+    ],
+    "product_details": {
+        "company_name": null,
+        "license_number": null,
+        "license_type": null,
+        "status": null,
+        "validity": null,
+        "address": null,
+        "products": [
+            {
+                "type": "Retailer",
+                "items": [
+                    "01 - Dairy products and analogues, excluding products of food category 2.0",
+                    "05 - Confectionery",
+                    "18- Indian Sweets and Indian Snacks & Savouries products",
+                    "13 - Foodstuffs intended for particular nutritional uses",
+                    "06 - Cereals and cereal products, derived from cereal grains, from roots and tubers, pulses, legumes and pith or soft core of palm tree, excluding bakery wares of food category 7.0",
+                    "07 - Bakery products"
+                ]
+            },
+            {
+                "type": "Restaurants",
+                "items": [
+                    "16 - Prepared Foods"
+                ]
+            },
+            {
+                "type": "Storage (Cold / Refrigerated)",
+                "items": [
+                    "01 - Dairy products and analogues, excluding products of food category 2.0"
+                ]
+            },
+            {
+                "type": "Storage (Controlled Atmosphere + Cold)",
+                "items": [
+                    "01 - Dairy products and analogues, excluding products of food category 2.0"
+                ]
+            },
+            {
+                "type": "Distributor",
+                "items": [
+                    "01 - Dairy products and analogues, excluding products of food category 2.0",
+                    "13 - Foodstuffs intended for particular nutritional uses",
+                    "18- Indian Sweets and Indian Snacks & Savouries products",
+                    "06 - Cereals and cereal products, derived from cereal grains, from roots and tubers, pulses, legumes and pith or soft core of palm tree, excluding bakery wares of food category 7.0",
+                    "07 - Bakery products"
+                ]
+            },
+            {
+                "type": "Storage (Except Controlled Atmosphere and Cold)",
+                "items": [
+                    "13 - Foodstuffs intended for particular nutritional uses",
+                    "18- Indian Sweets and Indian Snacks & Savouries products",
+                    "06 - Cereals and cereal products, derived from cereal grains, from roots and tubers, pulses, legumes and pith or soft core of palm tree, excluding bakery wares of food category 7.0",
+                    "07 - Bakery products"
+                ]
+            },
+            {
+                "type": "e-Commerce",
+                "items": [
+                    "13 - Foodstuffs intended for particular nutritional uses"
+                ]
+            },
+            {
+                "type": "Proprietary Food",
+                "items": [
+                    "Whey Based Drink",
+                    "Non Dairy Whitener",
+                    "Cheese Analogue",
+                    "Filler Pizza Toppings",
+                    "PIZZA BLEND",
+                    "TOPPING",
+                    "Gulab Jamun Mix"
+                ]
+            },
+            {
+                "type": "General Manufacturing",
+                "items": [
+                    "Edible Lactose",
+                    "Frozen Desserts or Confections with Added Vegetable Oil/ Fat or Vegetable Protein, or both",
+                    "Khoa Based Sweets",
+                    "Dry Fruit and nuts based Sweets",
+                    "Cereal based Sweets",
+                    "Pulses based Sweets",
+                    "Starch based Sweets",
+                    "Khoa Based Sweets",
+                    "Chhana based Sweets",
+                    "Indian Confections",
+                    "Wafer Biscuit",
+                    "Mixed Masala"
+                ]
+            },
+            {
+                "type": "Food or Health Supplements and Nutraceuticals etc.",
+                "items": [
+                    "HEALTH SUPPLEMENT – AMINO ACIDS POWDER (FLAVOURED)",
+                    "HEALTH SUPPLEMENT (Whey Protein Powder- Chocolate Flavour)",
+                    "NUTRACEUTICAL - COLOSTRUM BASED WITH WHEY PROTEIN CONCENTRATE POWDER (FLAVOURED)",
+                    "Nutraceutical(Creatine Powder)"
+                ]
+            },
+            {
+                "type": "Exporter - Manufacturer",
+                "items": [
+                    "Butter Milk",
+                    "Butter Oil",
+                    "Cheddar Cheese Diced /Other Cheese",
+                    "Cow Ghee",
+                    "Grated or Powdered Cheese of all Kinds.",
+                    "Milk Protein Concentrate (MPC)",
+                    "Mozzarella Cheese",
+                    "Other Cheese.",
+                    "Paneer",
+                    "Processed Cheese not Grated or Powdered.",
+                    "Skimmed Milk Powder.",
+                    "Whey Powder",
+                    "Whole Milk Powder.",
+                    "Yogurt"
+                ]
+            },
+            {
+                "type": "Dairy units",
+                "items": [
+                    "Buttermilk (plain)",
+                    "Flavoured Milk",
+                    "Fermented Milk",
+                    "Chakka",
+                    "Evaporated or Concentrated Milk",
+                    "Sweetened Condensed Milk",
+                    "Cow Milk",
+                    "Khoa",
+                    "Cream",
+                    "Milk Powders and Cream Powder",
+                    "Dairy Whitener",
+                    "Chhana and Paneer",
+                    "Cottage Cheese and Creamed Cottage Cheese",
+                    "Cheddar Cheese",
+                    "Gouda Cheese",
+                    "Emmental or Emmentaler",
+                    "Cow or Buffalo Colostrum and Colostrum Products",
+                    "Flavoured Yoghurt",
+                    "Processed Cheese",
+                    "Butter",
+                    "Processed Cheese Spread",
+                    "Frozen Desserts or Confections with Added Vegetable Oil/ Fat or Vegetable Protein, or both",
+                    "Whey Protein Concentrate",
+                    "Whey Powder",
+                    "Butter oil",
+                    "Anhydrous milk fat",
+                    "Ghee",
+                    "Standardized Milk",
+                    "Toned Milk",
+                    "Mozzarella Cheese",
+                    "Double Toned Milk",
+                    "Dairy Permeate Powders",
+                    "Skimmed Milk",
+                    "Buttermilk (plain)",
+                    "Cow Milk",
+                    "Toned Milk",
+                    "Double Toned Milk"
+                ]
+            }
+        ],
+        "manufacturing_details": null
+    },
+    "summary": {
+        "search_successful": true,
+        "products_extracted": true,
+        "total_records_found": 1
+    },
+    "page_url": "https://foscos.fssai.gov.in/"
+}
