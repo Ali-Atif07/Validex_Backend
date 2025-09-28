@@ -16,8 +16,8 @@ const PORT = process.env.PORT || 5000;
 
 // Redis client setup
 let redisClient;
-const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379'; // Fixed typo: REDIS_UR -> REDIS_URL
-const CACHE_EXPIRY = 24 * 60 * 60; // 24 hours in seconds (changed from 2 minutes for production)
+const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379'; 
+const CACHE_EXPIRY = 24 * 60 * 60;
 
 // Initialize Redis
 async function initRedis() {
